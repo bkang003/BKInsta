@@ -25,7 +25,7 @@ SECRET_KEY = 'l&_+l3s+#4k0reu6-@joo=*6og+z+bj5*@^yalasqbldh=@_p9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -122,3 +122,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# Global variable: account/profile
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'
+
+AUTH_USER_MODEL = 'Insta.InstaUser'
